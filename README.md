@@ -2,9 +2,11 @@
 # Getting Started
 
 First Install the skill Jarvis-DevOps, while enabling the skill will ask you to go through SignUp process.
-After that (2 steps are necessary to be passed):
+
+Now follow these steps:
 1) [Agent-Deployment] You have to install the jarvis-agent inside Your AWS account where DevOps are needed. Go for Deployment section
 2) [Account-Binding] You have to log-into Jarvis-Manager service and store Your jarvis-agent address (which you get from step-2)
+3) [Tag-Instance] Tag Your instance which you would like to gather CPU rate information
 
 # Agent-Deployment
 
@@ -70,6 +72,13 @@ Open `http://reactjarvis-20200913141753-hostingbucket-dev.s3-website-ap-southeas
 After login, you have to store ServiceEndpoit(from deployment step) at API field and push the `Store Jarvis-Agent API Address` button.
 
 Now Ready to use !!
+
+
+# Tag-Instance
+
+In order to check the CPU average rate (in percentages) for last 30 minutes go to your AWS-console and assign the tag with AlexaName. The value of this tag will be the keyword while requesting the status. For example `AlexaName: demoserver`
+
+Then after activating the Alexa Jarvis-DevOps skill you can request "status demoserver", and it will tell you the CPU Utilization information.
 
 # Troubleshootings
 
